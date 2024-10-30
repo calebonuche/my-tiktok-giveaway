@@ -3,84 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Giveaway</title>
+    <title>Follow Celebrities and Win $100</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background-color: #f0f0f0;
             color: #333;
             text-align: center;
+            padding: 20px;
         }
-        h1 {
-            color: #1e90ff;
-        }
-        .celeb-list {
-            margin: 20px;
-            text-align: left;
-            display: inline-block;
-        }
-        .celeb-item {
-            margin: 5px 0;
-        }
-        .upload-form {
+        #submitButton {
+            display: none; /* Hidden by default */
             margin-top: 20px;
         }
-        .upload-form input[type="file"] {
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+            display: none; /* Hidden by default */
+        }
+        #celebrity-list {
+            list-style: none;
+            padding: 0;
+        }
+        #celebrity-list li {
             margin: 10px 0;
         }
-        .submit-btn {
-            background-color: #1e90ff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .submit-btn:hover {
-            background-color: #6495ed;
-        }
     </style>
+</head>
+<body>
+    <h1>Follow These Celebrities and Win $100!</h1>
+    <p>Follow the celebrities listed below:</p>
+    
+    <ul id="celebrity-list">
+        <li><a href="https://www.tiktok.com/@davido?_t=8qykETg4vaA&_r=1">David</a></li>
+        <li><a href="https://www.tiktok.com/@keithubarnonlyfanspage">Keitubarnonlyfanspage</a></li>
+        <li><a href="https://www.tiktok.com/@calebosky1">Caleb Osoky</a></li>
+        <li><a href="https://www.tiktok.com/@therock">Dwayne Johnson</a></li>
+        <li><a href="https://www.tiktok.com/@willsmith">Will Smith</a></li>
+        <li><a href="https://www.tiktok.com/@selenagomez">Selena Gomez</a></li>
+        <li><a href="https://www.tiktok.com/@zoesugg">Zoe Sugg</a></li>
+        <li><a href="https://www.tiktok.com/@charlidamelio">Charli D'Amelio</a></li>
+        <li><a href="https://www.tiktok.com/@bellapoarch">Bella Poarch</a></li>
+        <li><a href="https://www.tiktok.com/@addisonrae">Addison Rae</a></li>
+        <li><a href="https://www.tiktok.com/@lorengray">Loren Gray</a></li>
+        <li><a href="https://www.tiktok.com/@jadenhossler">Jaden Hossler</a></li>
+        <li><a href="https://www.tiktok.com/@bellathorne">Bella Thorne</a></li>
+        <li><a href="https://www.tiktok.com/@lizakoshy">Liza Koshy</a></li>
+        <li><a href="https://www.tiktok.com/@lilly">Lily Singh</a></li>
+    </ul>
+
+    <form id="submissionForm">
+        <label for="screenshot">Upload your screenshot:</label>
+        <input type="file" id="screenshot" name="screenshot" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="timer">Timer: <span id="countdown">60</span> seconds</div>
+    <button id="submitButton">Click Here to Claim Your $100!</button>
+
     <script>
-        function redirectAfterDelay() {
-            setTimeout(function() {
-                window.location.href = "https://xportbox.com/XU/VI?nox=7277082848";
-            }, 120000); // 120000 ms = 2 minutes
+        document.getElementById("submissionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            document.getElementById("submitButton").style.display = "block"; // Show the button
+            startTimer(); // Start the timer
+        });
+
+        function startTimer() {
+            let timeLeft = 60;
+            document.getElementById("timer").style.display = "block"; // Show the timer
+            const countdownElement = document.getElementById("countdown");
+            const timerInterval = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    countdownElement.innerHTML = "Time's up!";
+                } else {
+                    countdownElement.innerHTML = timeLeft;
+                }
+                timeLeft -= 1;
+            }, 1000);
         }
     </script>
-</head>
-<body onload="redirectAfterDelay()">
-    <h1>Follow These Celebrities and Win $100!</h1>
-    <p>Follow the listed TikTok stars and upload a screenshot to win $100 instantly!</p>
-    <div class="celeb-list">
-        <h2>Follow these TikTok Stars:</h2>
-       <ul>
-    <li><a href="https://www.tiktok.com/@davido?_t=8qykETg4vaA&_r=1">David</a></li>
-    <li><a href="https://www.tiktok.com/@keithubarnonlyfanspage">Keitubarnonlyfanspage</a></li>
-    <li><a href="https://www.tiktok.com/@calebosky1">Caleb Osoky</a></li>
-    <li><a href="https://www.tiktok.com/@therock">Dwayne Johnson</a></li>
-    <li><a href="https://www.tiktok.com/@willsmith">Will Smith</a></li>
-    <li><a href="https://www.tiktok.com/@selenagomez">Selena Gomez</a></li>
-    <li><a href="https://www.tiktok.com/@zoesugg">Zoe Sugg</a></li>
-    <li><a href="https://www.tiktok.com/@charlidamelio">Charli D'Amelio</a></li>
-    <li><a href="https://www.tiktok.com/@bellapoarch">Bella Poarch</a></li>
-    <li><a href="https://www.tiktok.com/@addisonrae">Addison Rae</a></li>
-    <li><a href="https://www.tiktok.com/@lorengray">Loren Gray</a></li>
-    <li><a href="https://www.tiktok.com/@jadenhossler">Jaden Hossler</a></li>
-    <li><a href="https://www.tiktok.com/@bellathorne">Bella Thorne</a></li>
-    <li><a href="https://www.tiktok.com/@lizakoshy">Liza Koshy</a></li>
-    <li><a href="https://www.tiktok.com/@lilly">Lily Singh</a></li>
-</ul>
-    </div>
-
-    <!-- Upload Form -->
-    <div class="upload-form">
-        <form action="https://example.com/upload" method="post" enctype="multipart/form-data">
-            <label for="screenshot">Upload a screenshot as proof:</label><br>
-            <input type="file" name="screenshot" id="screenshot" accept="image/*" required><br>
-            <button type="submit" class="submit-btn">Submit Screenshot</button>
-        </form>
-    </div>
-
-    <p>Once you’re done, you will be redirected to claim your prize in 2 minutes.</p>
 </body>
 </html>
