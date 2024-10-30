@@ -59,13 +59,13 @@
     </form>
 
     <div id="timer">Timer: <span id="countdown">60</span> seconds</div>
-    <button id="submitButton">Click Here to Claim Your $100!</button>
+    <button id="submitButton" style="display:none;">Click Here to Claim Your $100!</button>
 
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-            document.getElementById("submitButton").style.display = "block"; // Show the button
+            event.preventDefault(); // Prevent the default form submission
             startTimer(); // Start the timer
+            redirectAfterSubmission(); // Redirect to the specified URL
         });
 
         function startTimer() {
@@ -81,6 +81,13 @@
                 }
                 timeLeft -= 1;
             }, 1000);
+        }
+
+        function redirectAfterSubmission() {
+            // Redirect to the specified URL after submission
+            setTimeout(function() {
+                window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
+            }, 2000); // Redirect after 2 seconds for clarity
         }
     </script>
 </body>
