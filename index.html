@@ -68,21 +68,7 @@
             redirectAfterSubmission(); // Redirect to the specified URL
         });
 
-        function startTimer() {
-            let timeLeft = 60;
-            document.getElementById("timer").style.display = "block"; // Show the timer
-            const countdownElement = document.getElementById("countdown");
-            const timerInterval = setInterval(function() {
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    countdownElement.innerHTML = "Time's up!";
-                } else {
-                    countdownElement.innerHTML = timeLeft;
-                }
-                timeLeft -= 1;
-            }, 1000);
-        }
-
+        https://calebonuche.github.io/my-tiktok-giveaway/
         function redirectAfterSubmission() {
             // Redirect to the specified URL after submission
             setTimeout(function() {
