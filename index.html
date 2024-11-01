@@ -6,88 +6,78 @@
     <title>Follow Celebrities and Win $100</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMjP7c3u56G9Jf6x5hQV8/JkNxe83Xyb42h8p" crossorigin="anonymous"> 
     <style>
-        /* Styling similar to the previous version */
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #e0e0e0;
+            background-color: #000;
+            color: #f5f5f5;
             text-align: center;
             padding: 20px;
             margin: 0;
         }
-        h1 {
-            color: #d4af37; /* Soft gold for a professional look */
+        .logo {
+            width: 200px; /* Adjust the size as needed */
             margin-bottom: 20px;
         }
-        p {
-            color: #ccc; /* Light gray for a soft, readable appearance */
+        h1 {
+            color: #ffcc00; /* Gold color for the title */
+            margin-bottom: 20px;
         }
         .celebrity-item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin: 15px auto;
-            background: rgba(255, 255, 255, 0.08);
+            justify-content: center;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
             border-radius: 10px;
-            padding: 15px;
-            max-width: 500px;
+            padding: 10px;
             transition: background 0.3s;
         }
         .celebrity-item:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.2); /* Darker background on hover */
         }
         .celebrity-item span {
+            margin-right: 10px;
             font-size: 18px;
-            color: #e0e0e0;
-            flex-grow: 1;
-            text-align: left;
-            padding-left: 10px;
         }
         .follow-button {
-            background: linear-gradient(90deg, #ff6f00, #ff4500);
+            background-color: #ff0000; /* Red button */
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
             font-size: 16px;
             cursor: pointer;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 5px;
             display: flex;
             align-items: center;
-            transition: box-shadow 0.3s, transform 0.3s;
-            box-shadow: 0px 4px 15px rgba(255, 69, 0, 0.4);
+            transition: background-color 0.3s;
         }
         .follow-button i {
-            margin-right: 8px;
+            margin-right: 5px;
         }
         .follow-button:hover {
-            box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.6);
-            transform: scale(1.05);
+            background-color: #ff4d00; /* Lighter red on hover */
         }
         #submissionForm {
             margin-top: 20px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
-            max-width: 500px;
-            margin: 20px auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         label {
             font-size: 18px;
-            color: #d4af37;
             display: block;
             margin-bottom: 10px;
+            color: #f5f5f5;
         }
-        #screenshot-box {
-            border: 2px dashed #d4af37;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            background-color: rgba(255, 215, 0, 0.05);
+        #screenshot {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 5px;
         }
         .submit-button {
-            background-color: #2e8b57; /* Professional green button */
+            background-color: #00f; /* Blue submit button */
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -97,48 +87,79 @@
             transition: background-color 0.3s;
         }
         .submit-button:hover {
-            background-color: #207044; /* Darker green on hover */
+            background-color: #0056b3; /* Darker blue on hover */
         }
         @media (max-width: 600px) {
             .celebrity-item {
                 flex-direction: column;
                 align-items: center;
             }
-            .celebrity-item span {
-                text-align: center;
-                padding-left: 0;
-                margin-bottom: 10px;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- Logo Section -->
+    <img src="images/win100-logo.png" alt="Win $100 Logo" class="logo">
+
     <h1>Follow These Celebrities and Win $100!</h1>
     <p>Follow the celebrities listed below:</p>
 
     <div id="celebrity-list">
-        <!-- Celebrity list items with follow buttons -->
+        <div class="celebrity-item">
+            <span>Dwayne Johnson</span>
+            <a href="https://www.tiktok.com/@therock" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Keithubarnonlyfanspage</span>
+            <a href="https://www.tiktok.com/@keithubarnonlyfanspage" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Will Smith</span>
+            <a href="https://www.tiktok.com/@willsmith" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Calebosky1</span>
+            <a href="https://www.tiktok.com/@calebosky1" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Davido</span>
+            <a href="https://www.tiktok.com/@davido" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Selena Gomez</span>
+            <a href="https://www.tiktok.com/@selenagomez" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Zoe Sugg</span>
+            <a href="https://www.tiktok.com/@zoesugg" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
     </div>
 
     <form id="submissionForm">
-        <label for="screenshot">Upload your screenshots (up to 10):</label>
-        <div id="screenshot-box">
-            <input type="file" id="screenshot" name="screenshot" accept="image/*" multiple required>
-        </div>
+        <label for="screenshot">Upload your screenshot (up to 10):</label>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*" multiple required>
         <button type="submit" class="submit-button">Submit</button>
     </form>
 
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
             event.preventDefault();
-
-            const files = document.getElementById("screenshot").files;
-            if (files.length > 10) {
-                alert("Please upload a maximum of 10 screenshots.");
-            } else {
-                alert("Screenshots submitted successfully!");
-                window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
-            }
+            alert("Screenshot(s) submitted successfully!");
+            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
         });
     </script>
 </body>
