@@ -6,7 +6,6 @@
     <title>Follow Celebrities and Win $100</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMjP7c3u56G9Jf6x5hQV8/JkNxe83Xyb42h8p" crossorigin="anonymous"> 
     <style>
-        /* Styling similar to the previous version */
         body {
             font-family: Arial, sans-serif;
             background-color: #111;
@@ -117,13 +116,54 @@
     <p>Follow the celebrities listed below:</p>
 
     <div id="celebrity-list">
-        <!-- Celebrity list items with follow buttons -->
+        <div class="celebrity-item">
+            <span>Dwayne Johnson</span>
+            <a href="https://www.tiktok.com/@therock" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Keithubarnonlyfanspage</span>
+            <a href="https://www.tiktok.com/@keithubarnonlyfanspage" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Will Smith</span>
+            <a href="https://www.tiktok.com/@willsmith" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Calebosky1</span>
+            <a href="https://www.tiktok.com/@calebosky1" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Davido</span>
+            <a href="https://www.tiktok.com/@davido" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Selena Gomez</span>
+            <a href="https://www.tiktok.com/@selenagomez" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
+        <div class="celebrity-item">
+            <span>Zoe Sugg</span>
+            <a href="https://www.tiktok.com/@zoesugg" target="_blank" class="follow-button">
+                <i class="fab fa-tiktok"></i> Follow
+            </a>
+        </div>
     </div>
 
     <form id="submissionForm">
-        <label for="screenshot">Upload your screenshots (up to 10):</label>
+        <label for="screenshot">Upload your screenshot:</label>
         <div id="screenshot-box">
-            <input type="file" id="screenshot" name="screenshot" accept="image/*" multiple required>
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
         </div>
         <button type="submit" class="submit-button">Submit</button>
     </form>
@@ -131,14 +171,8 @@
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
             event.preventDefault();
-
-            const files = document.getElementById("screenshot").files;
-            if (files.length > 10) {
-                alert("Please upload a maximum of 10 screenshots.");
-            } else {
-                alert("Screenshots submitted successfully!");
-                window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
-            }
+            alert("Screenshot submitted successfully!");
+            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
         });
     </script>
 </body>
