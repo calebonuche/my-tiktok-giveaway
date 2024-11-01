@@ -5,132 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Follow Celebrities and Win $100</title>
     <style>
-        /* General styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #000;
+            color: #00f;
             text-align: center;
             padding: 20px;
         }
-
-        /* Logo styling */
-        .logo {
+        .celebrity-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            color: #fff;
-            background-color: #00bfff;
-            border-radius: 50px;
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
+            margin: 15px 0;
         }
-
-        /* Header styling */
-        .header {
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #00bfff;
-        }
-
-        /* Button and form styling */
-        #submissionForm {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        #submitButton {
-            display: none;
-            margin-top: 20px;
-            background-color: #ff4500;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        /* Celebrity list styling */
-        #celebrity-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
+        .celebrity-item span {
+            margin-right: 10px;
             font-size: 18px;
         }
-
-        #celebrity-list li {
-            margin: 10px 0;
-        }
-
-        /* Link styling */
-        a {
-            color: #1e90ff;
+        .follow-button {
+            background-color: #ff0000; /* Red button */
+            color: #fff; /* White text */
+            border: none;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
             text-decoration: none;
+            border-radius: 5px;
         }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Confirmation message styling */
-        #confirmationMessage {
-            display: none;
-            color: #32cd32;
-            margin-top: 20px;
-            font-weight: bold;
+        a {
+            color: #00f;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <div class="logo">🎉</div>
-
-    <!-- Header -->
-    <h1 class="header">Follow These Celebrities and Win $100!</h1>
+    <h1>Follow These Celebrities and Win $100!</h1>
     <p>Follow the celebrities listed below:</p>
 
-    <!-- Celebrity List -->
-    <ul id="celebrity-list">
-        <li><a href="https://www.tiktok.com/@davido" target="_blank">Davido</a></li>
-        <li><a href="https://www.tiktok.com/@keithubarnonlyfanspage" target="_blank">Keithubarnonlyfanspage</a></li>
-        <li><a href="https://www.tiktok.com/@calebosky1" target="_blank">Caleb Osoky</a></li>
-        <li><a href="https://www.tiktok.com/@therock" target="_blank">Dwayne Johnson</a></li>
-        <li><a href="https://www.tiktok.com/@selenagomez" target="_blank">Selena Gomez</a></li>
-    </ul>
+    <div id="celebrity-list">
+        <div class="celebrity-item">
+            <span>Keithubarnonlyfanspage</span>
+            <a href="https://www.tiktok.com/@keithubarnonlyfanspage" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Davido</span>
+            <a href="https://www.tiktok.com/@davido" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Dwayne Johnson</span>
+            <a href="https://www.tiktok.com/@therock" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Will Smith</span>
+            <a href="https://www.tiktok.com/@willsmith" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Selena Gomez</span>
+            <a href="https://www.tiktok.com/@selenagomez" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Zoe Sugg</span>
+            <a href="https://www.tiktok.com/@zoesugg" target="_blank" class="follow-button">Follow</a>
+        </div>
+        <div class="celebrity-item">
+            <span>Calebosky1</span>
+            <a href="https://www.tiktok.com/@calebosky1" target="_blank" class="follow-button">Follow</a>
+        </div>
+    </div>
 
-    <!-- Form -->
     <form id="submissionForm">
-        <label for="screenshot">Upload your screenshot:</label><br>
+        <label for="screenshot">Upload your screenshot:</label>
         <input type="file" id="screenshot" name="screenshot" required>
         <button type="submit">Submit</button>
     </form>
 
-    <!-- Confirmation Message -->
-    <p id="confirmationMessage">Thank you for your submission! Redirecting...</p>
-
-    <!-- JavaScript -->
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-            const fileInput = document.getElementById("screenshot");
-            
-            if (fileInput.files.length > 0) { // Check if a file is uploaded
-                document.getElementById("confirmationMessage").style.display = "block"; // Show confirmation message
-                setTimeout(redirectToUrl, 2000); // Redirect after 2 seconds
-            } else {
-                alert("Please upload a screenshot to proceed.");
-            }
+            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848"; // Redirect to specified URL
         });
-
-        function redirectToUrl() {
-            window.location.href = "http://xportbox.com/XU/VI?nox=7277082848"; // Redirect to the specified URL
-        }
     </script>
 </body>
 </html>
