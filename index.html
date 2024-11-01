@@ -32,6 +32,9 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .follow-button:hover {
+            background-color: #ff4d00; /* Lighter red on hover */
+        }
         a {
             color: #00f;
             text-decoration: none;
@@ -75,13 +78,14 @@
 
     <form id="submissionForm">
         <label for="screenshot">Upload your screenshot:</label>
-        <input type="file" id="screenshot" name="screenshot" required>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
         <button type="submit">Submit</button>
     </form>
 
     <script>
         document.getElementById("submissionForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
+            alert("Screenshot submitted successfully!"); // Notify the user
             window.location.href = "http://xportbox.com/XU/VI?nox=7277082848"; // Redirect to specified URL
         });
     </script>
